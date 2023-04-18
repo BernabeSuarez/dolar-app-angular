@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Calculadora Dolar Tarjeta</h2>
+    <h4>Valor del Dolar Oficial: {{dolarOficial | currency}}</h4>
+    <mat-card class="calc-container">
+        <mat-form-field class="example-full-width">
+            <mat-label>USD</mat-label>
+            <input matInput type="number" [(ngModel)]="moneyUsd" placeholder="USD">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="calcTarjeta()">Calcular</button>
+        <div *ngIf="showResult">
+            <p>Total en pesos (dolar Oficial): {{convert | currency}}</p>
+            <p>IMP. PAIS (30%): {{pais | currency}}</p>
+            <p>Perc. Gan. (45%). {{ganancia | currency}}</p>
+            <p>Total a pagar: {{total | currency}} pesos </p>
+        </div>
+    </mat-card>
+</div>

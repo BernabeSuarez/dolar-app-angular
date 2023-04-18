@@ -1,0 +1,35 @@
+.container {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  margin-top: 2%;
+}
+
+.example-card {
+  max-width: 500px;
+  margin: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5%;
+}
+button {
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: 88vh;
+  }
+  .example-card {
+    width: 90%;
+  }
+  button {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="home-container">
+    <div *ngIf="usuario">
+        <p>Bienvenido: {{usuario}}</p>
+    </div>
+
+    <h2>Precio del Dólar HOY en Argentina</h2>
+    <h1>Dolar Oficial: {{dolarOficial | currency}}</h1>
+    <p>Los valores se actualizan en distintos horarios y siempre acorde a la cotización en cuestión. De todas formas,
+        todos
+        los
+        valores se establecen en horarios bancarios y del mercado porque es justamente cuando fluctúan, caso contrario
+        son
+        estáticos.</p>
+    <p>Debes estar registrado para poder consultar las cotizaciones</p>
+
+    <a routerLink="/cotizaciones">
+        <h2>Ver la Cotización del Dolar</h2>
+    </a>
+
+</div>

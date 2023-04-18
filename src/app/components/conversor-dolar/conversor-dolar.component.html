@@ -1,0 +1,30 @@
+<div class="container">
+    <button mat-raised-button color="primary" (click)="pesoDolar()">Pesos A Dolar</button>
+    <button mat-raised-button color="primary" (click)="dolarPeso()">Dolares a Pesos</button>
+    <ng-container *ngIf="selectedMoney" class="container">
+        <mat-card class="calc-container">
+            <mat-form-field class="example-full-width">
+                <mat-label>ARS</mat-label>
+                <input matInput type="number" [(ngModel)]="moneyUsd" placeholder="ARS">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="convertArsToUsd()">Convertir</button>
+            <div *ngIf="showResult">
+                <p>{{showUsd}} Pesos equivalen a: {{convert | currency}} Dolares </p>
+            </div>
+        </mat-card>
+    </ng-container>
+    <ng-container *ngIf="!selectedMoney" class="container">
+        <mat-card class="calc-container">
+            <mat-form-field class="example-full-width">
+                <mat-label>USD</mat-label>
+                <input matInput type="number" [(ngModel)]="moneyUsd" placeholder="USD">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="convertUsdToArs()">Convertir</button>
+            <div *ngIf="showResult">
+                <p>{{showUsd}} Dolares equivalen a: {{convert | currency}} Pesos </p>
+            </div>
+        </mat-card>
+    </ng-container>
+
+    <h2>Valor del Dolar Oficial: {{dolarOficial | currency}}</h2>
+</div>

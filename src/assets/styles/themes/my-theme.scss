@@ -1,0 +1,69 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+//gama de color
+
+$my-primary-color: (
+  100: #b6d3dd,
+  200: #86b6c6,
+  500: #0d6d8c,
+  700: #095a79,
+
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+
+$my-Accent-color: (
+  100: #f8f6f6,
+  200: #d7d7d7,
+  500: #797979,
+  700: #5c5c5c,
+
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+$my-warn-color: (
+  100: #fcd6d6,
+  200: #ffb3b3,
+  500: #ff0000,
+  700: #ff0000,
+
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #000000,
+    700: #000000,
+  ),
+);
+
+//paleta de colores
+
+$my-primary: mat.define-palette($my-primary-color);
+
+$my-accent: mat.define-palette($my-Accent-color);
+$my-warn: mat.define-palette($my-warn-color);
+
+//tema personalizado
+
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+    ),
+    density: 0,
+  )
+);
+
+//aplicar tema
+
+@include mat.all-component-themes($my-theme);

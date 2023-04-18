@@ -1,0 +1,129 @@
+[debug] [2023-04-09T23:07:00.811Z] ----------------------------------------------------------------------
+[debug] [2023-04-09T23:07:00.814Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\suare\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-04-09T23:07:00.815Z] CLI Version:   11.25.3
+[debug] [2023-04-09T23:07:00.816Z] Platform:      win32
+[debug] [2023-04-09T23:07:00.816Z] Node Version:  v18.13.0
+[debug] [2023-04-09T23:07:00.819Z] Time:          Sun Apr 09 2023 20:07:00 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-04-09T23:07:00.820Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-09T23:07:00.944Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-09T23:07:00.945Z] > authorizing via signed-in user (bernatattoo@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\suare\Desktop\Cursos Web\Angular\Nueva App Angular\angularFirebase
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-04-09T23:10:01.517Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-04-09T23:10:02.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-04-09T23:10:02.410Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project angularfirebase-71c44 (AngularFirebase) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-04-09T23:10:04.096Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-04-09T23:10:04.096Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:10:05.184Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com 200
+[debug] [2023-04-09T23:10:05.184Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2023-04-09T23:10:05.186Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2023-04-09T23:10:05.186Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:10:06.796Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2023-04-09T23:10:06.796Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2023-04-09T23:10:16.798Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-04-09T23:10:16.799Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:10:17.953Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com 200
+[debug] [2023-04-09T23:10:17.953Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-04-09T23:10:17.961Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 [none]
+[debug] [2023-04-09T23:10:18.367Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 200
+[debug] [2023-04-09T23:10:18.367Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 {"projectId":"angularfirebase-71c44","projectNumber":"46505423025","displayName":"AngularFirebase","name":"projects/angularfirebase-71c44","resources":{"hostingSite":"angularfirebase-71c44"},"state":"ACTIVE","etag":"1_82caa7f9-bee6-4181-a3f8-16aab7c80c7b"}
+[debug] [2023-04-09T23:12:46.379Z] ----------------------------------------------------------------------
+[debug] [2023-04-09T23:12:46.383Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\suare\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-04-09T23:12:46.384Z] CLI Version:   11.25.3
+[debug] [2023-04-09T23:12:46.385Z] Platform:      win32
+[debug] [2023-04-09T23:12:46.385Z] Node Version:  v18.13.0
+[debug] [2023-04-09T23:12:46.388Z] Time:          Sun Apr 09 2023 20:12:46 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-04-09T23:12:46.389Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-09T23:12:46.525Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-09T23:12:46.526Z] > authorizing via signed-in user (bernatattoo@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\suare\Desktop\Cursos Web\Angular\Nueva App Angular\angularFirebase
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-04-09T23:13:08.178Z] Using project from CLI flag: angularfirebase-71c44
+[debug] [2023-04-09T23:13:08.186Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 [none]
+[debug] [2023-04-09T23:13:08.623Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 200
+[debug] [2023-04-09T23:13:08.623Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angularfirebase-71c44 {"projectId":"angularfirebase-71c44","projectNumber":"46505423025","displayName":"AngularFirebase","name":"projects/angularfirebase-71c44","resources":{"hostingSite":"angularfirebase-71c44","realtimeDatabaseInstance":"angularfirebase-71c44-default-rtdb"},"state":"ACTIVE","etag":"1_82caa7f9-bee6-4181-a3f8-16aab7c80c7b"}
+[info] i  Using project angularfirebase-71c44 (AngularFirebase) 
+[info] 
+=== Functions Setup
+[debug] [2023-04-09T23:13:08.634Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-09T23:13:08.635Z] > authorizing via signed-in user (bernatattoo@gmail.com)
+[debug] [2023-04-09T23:13:08.635Z] [iam] checking project angularfirebase-71c44 for permissions ["firebase.projects.get"]
+[debug] [2023-04-09T23:13:08.636Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/angularfirebase-71c44:testIamPermissions [none]
+[debug] [2023-04-09T23:13:08.636Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/angularfirebase-71c44:testIamPermissions x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:13:08.637Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angularfirebase-71c44:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-09T23:13:09.633Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/angularfirebase-71c44:testIamPermissions 200
+[debug] [2023-04-09T23:13:09.633Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angularfirebase-71c44:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-04-09T23:13:09.635Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-09T23:13:09.635Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:13:09.637Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-09T23:13:09.637Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:13:10.706Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-09T23:13:10.706Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-09T23:13:10.832Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-09T23:13:10.832Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2023-04-09T23:13:10.832Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2023-04-09T23:13:10.833Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:13:12.874Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2023-04-09T23:13:12.874Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2023-04-09T23:13:22.879Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-09T23:13:22.880Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/angularfirebase-71c44
+[debug] [2023-04-09T23:13:23.984Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-09T23:13:23.985Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/angularfirebase-71c44/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+

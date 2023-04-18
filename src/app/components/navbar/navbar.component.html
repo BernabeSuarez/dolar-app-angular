@@ -1,0 +1,63 @@
+<nav>
+    <div class="desktop">
+
+        <a routerLink="/">Home</a>
+        <a routerLink="/convertidor">Convertidor</a>
+        <a routerLink="/calculadora">Calculadora</a>
+        <a routerLink="/cotizaciones">Cotizaciones</a>
+        <div *ngIf="currentUser; else loginButton">
+            <div><button mat-button (click)="logout()">logout</button></div>
+        </div>
+        <ng-template #loginButton>
+            <div><button mat-button (click)="login()">login</button></div>
+        </ng-template>
+    </div>
+
+
+    <div class="mobile">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a routerLink="/">
+                <button mat-menu-item>
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                </button>
+            </a>
+            <a routerLink="/cotizaciones">
+                <button mat-menu-item>
+                    <mat-icon>paid</mat-icon>
+                    <span>Cotizaciones</span>
+                </button>
+            </a>
+            <a routerLink="/convertidor">
+                <button mat-menu-item>
+                    <mat-icon>currency_exchange</mat-icon>
+                    <span>Convertidor</span>
+                </button>
+            </a>
+            <a routerLink="/calculadora">
+                <button mat-menu-item>
+                    <mat-icon>calculated</mat-icon>
+                    <span>Calculadora</span>
+                </button>
+            </a>
+            <div *ngIf="currentUser">
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon>logout</mat-icon>
+                    <span>Salir</span>
+                </button>
+            </div>
+            <div *ngIf="!currentUser">
+                <button mat-menu-item (click)="login()">
+                    <mat-icon>
+                        login
+                    </mat-icon>
+                    <span>Ingresar</span>
+                </button>
+            </div>
+        </mat-menu>
+    </div>
+
+</nav>

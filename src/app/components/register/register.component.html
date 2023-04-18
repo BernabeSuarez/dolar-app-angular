@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card>
+
+        <h2>Registrarse</h2>
+        <form [formGroup]="registerForm">
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="ejemplo@tumail.com">
+                <mat-error *ngIf="email?.errors?.['required'] && email?.touched">
+                    El campo Email es obligatorio
+                </mat-error>
+            </mat-form-field>
+            <!-- <span *ngIf="email?.errors?.['required'] && email?.touched">
+                            <p [ngStyle]="{color:'tomato'}">El campo Email es obligatorio</p>
+                        </span> -->
+            <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="*******">
+                <mat-error *ngIf="password?.errors?.['required'] && password?.touched">
+                    La contraseña es obligatoria
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="onSubmit()"
+                [disabled]="registerForm.invalid">Registrarse</button>
+
+
+        </form>
+        <mat-divider></mat-divider>
+        <h5>Ya tienes cuenta? <b (click)="toLogin()">Ingresar</b></h5>
+    </mat-card>
+
+</div>
